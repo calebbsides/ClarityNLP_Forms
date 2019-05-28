@@ -15,13 +15,15 @@ export default class Form extends Component {
     };
   }
 
-  componentDidMount() {
+  componentDidMount() {}
+
+  getResults = () => {
     const { patient, form, smart } = this.props.app;
 
-    // if (patient.documents) {
-    //   this.props.getEvidence(patient, smart.server, form);
-    // }
-  }
+    if (patient.documents) {
+      this.props.getEvidence(patient, smart.server, form);
+    }
+  };
 
   handleGroupChange = group => {
     const { form } = this.props.app;
@@ -84,6 +86,7 @@ export default class Form extends Component {
             </Col>
           </Row>
         </Col>
+        <button onClick={this.getResults}>RUN</button>
       </Row>
     );
   }

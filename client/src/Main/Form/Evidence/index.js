@@ -51,19 +51,8 @@ export default class Evidence extends Component {
   };
 
   render() {
-    const { loading, evidence } = this.props;
-    // const { displayEvidence } = this.state;
-
-    const displayEvidence = evidence
-      .filter(e => {
-        return e.nlpql_feature !== 'null';
-      })
-      .sort((a, b) => {
-        const dateA = new Date(a.report_date);
-        const dateB = new Date(b.report_date);
-
-        return dateA - dateB;
-      });
+    const { loading } = this.props;
+    const { displayEvidence } = this.state;
 
     return (
       <div className='evidence'>
