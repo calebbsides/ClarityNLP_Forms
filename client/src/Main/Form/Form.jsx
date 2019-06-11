@@ -15,7 +15,9 @@ export default class Form extends Component {
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    this.getResults();
+  }
 
   getResults = () => {
     const { patient, form, smart } = this.props.app;
@@ -75,7 +77,7 @@ export default class Form extends Component {
                 handleQuestionChange={this.handleQuestionChange}
               />
             </Col>
-            <Col>
+            <Col xs='6'>
               <Evidence
                 selectedQuestion={
                   selectedQuestion ? selectedQuestion : form.questions[0]
@@ -86,7 +88,6 @@ export default class Form extends Component {
             </Col>
           </Row>
         </Col>
-        <button onClick={this.getResults}>RUN</button>
       </Row>
     );
   }
