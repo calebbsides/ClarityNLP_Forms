@@ -3,16 +3,19 @@ export default {
   owner: 'gatech',
   allocated_users: ['admin'],
   groups: [
-    'Infection',
-    'Current Hematologic Findings',
-    'Persistence of Cells',
     'Product',
-    'Graft vs. Host Disease',
-    'Peripheral Blood Count Recovery',
-    'Toxicities',
-    'Functional Status',
+    'Survival',
     'Subsequent Cellular Infusions',
-    'New Malignancy, Lymphoproliferative or Myeloproliferative Disease / Disorder'
+    'Best Response to Cellular Therapy',
+    'Disease Relapse or Progression',
+    'Peripheral Blood Count Recovery',
+    'Current Hematologic Findings',
+    'New Malignancy, Lymphoproliferative or Myeloproliferative Disease / Disorder',
+    'Persistence of Cells',
+    'Graft vs. Host Disease',
+    'Toxicities',
+    'Infection',
+    'Functional Status'
   ],
   questions: [
     {
